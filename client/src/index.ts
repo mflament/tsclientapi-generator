@@ -27,7 +27,6 @@ window.onload = async () => {
 
     const userController = new UserController(httpClient);
     const users = (await userController.getUsers()).data;
-    console.log(users);
 
     log("getUsers(): ", users);
 

@@ -20,6 +20,10 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- DDQ dependencies -->
+
+
+            <!-- Spring boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -28,6 +32,7 @@
                 <scope>import</scope>
             </dependency>
 
+            <!-- Spring docs -->
             <dependency>
                 <groupId>org.springdoc</groupId>
                 <artifactId>springdoc-openapi-ui</artifactId>

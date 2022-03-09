@@ -1,5 +1,7 @@
 package org.mf.test.testrestapi.api;
 
+import javax.validation.constraints.NotNull;
+
 public class Planet {
     private final String name;
     private final int diameterKms;
