@@ -30,6 +30,7 @@ public class UserController {
 
     /**
      * Get all the users
+     *
      * @return the users list
      */
     @GetMapping
@@ -39,6 +40,7 @@ public class UserController {
 
     /**
      * Get the user with the given id.
+     *
      * @param id the user id
      * @return the user with id id
      */
@@ -98,7 +100,7 @@ public class UserController {
     private static Map<String, User> mockUsers(int count) {
         Faker faker = new Faker();
         return IntStream.range(0, count)
-                .mapToObj(i -> randomUser(i, faker))
+                .mapToObj(i -> randomUser(i + 1, faker))
                 .collect(Collectors.toMap(User::getId, Function.identity()));
     }
 

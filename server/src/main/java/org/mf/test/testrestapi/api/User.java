@@ -74,4 +74,60 @@ public class User {
                 ", address=" + address +
                 '}';
     }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static final class Builder {
+
+        private String id;
+        private String firstName;
+        private String lastName;
+        private LocalDate birthDate;
+
+        private String alacon;
+
+        private Address address;
+
+        private Builder() {
+        }
+
+        private Builder(User user) {
+            id = user.id;
+            firstName = user.firstName;
+            lastName = user.lastName;
+            birthDate = user.birthDate;
+            address = user.address;
+        }
+
+        public Builder withId(String id) {
+            this.id = id;
+            return this;
+        }
+
+        public Builder withFirstName(String firstName) {
+            this.firstName = firstName;
+            return this;
+        }
+
+        public Builder withLastName(String lastName) {
+            this.lastName = lastName;
+            return this;
+        }
+
+        public Builder withBirthDate(LocalDate birthDate) {
+            this.birthDate = birthDate;
+            return this;
+        }
+
+        public Builder withAddress(Address address) {
+            this.address = address;
+            return this;
+        }
+
+        public User build() {
+            return new User(id, firstName, lastName, birthDate, address);
+        }
+    }
 }
